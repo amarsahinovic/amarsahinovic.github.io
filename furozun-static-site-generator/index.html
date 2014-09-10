@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Furozun, static site generator - Amar Sahinovic</title>
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Droid+Sans'>
+    <link rel='stylesheet' type='text/css' href="/static/css/normalize.css">
+    <link rel='stylesheet' type='text/css' href="/static/css/main.css">
+</head>
+<body>
+
+<div id="layout">
+    <header>
+    <h1 class="site-header">Amar Šahinović <small>Rubyist by day, Pythonista by night</small></h1>
+</header>
+    
+<nav>
+    <ul id="nav-list">
+        <li><a href="/" >Home</a></li>
+        <li><a href="/contact/" >Contact</a></li>
+        <li><a href="/resume/" >Resume</a></li>
+    </ul>
+</nav>
+    
+<header>
+    <h1><a href="/furozun-static-site-generator/" id="page-title">Furozun, static site generator</a></h1>
+    <time datetime="2014-09-11">2014-09-11</time>
+</header>
+<article>
+    <p>I've made a simple static site generator (who didn't write one?) that is currently powering this website.
+It doesn't have many features, but it is exactly what I need.</p>
+<p>It's called Furōzun (meaning frozen in Japanese, I hope :D) and you can find the source on <a href="https://github.com/amarsahinovic/furozun">github</a>.
+To use it, just install it with pip, create a directory to hold your blog, and run a few commands :)</p>
+<p>You can see the entire procedure to create a simple blog like the one you are reading right now
+(I assume you have already installed it with pip).</p>
+<div class="codehilite"><pre><span class="o">(</span>furozun<span class="o">)[</span>amar@galaxy ~<span class="o">]</span><span class="nv">$ </span>mkdir blog
+<span class="o">(</span>furozun<span class="o">)[</span>amar@galaxy ~<span class="o">]</span><span class="nv">$ </span><span class="nb">cd </span>blog/
+<span class="o">(</span>furozun<span class="o">)[</span>amar@galaxy blog<span class="o">]</span><span class="nv">$ </span>furozun init
+<span class="o">(</span>furozun<span class="o">)[</span>amar@galaxy blog<span class="o">]</span><span class="nv">$ </span>ls -a
+./  ../  build/  pages/  static/  templates/  .furozun
+<span class="o">(</span>furozun<span class="o">)[</span>amar@galaxy blog<span class="o">]</span><span class="nv">$ </span>furozun
+ * Running on http://127.0.0.1:8000/
+ * Restarting with reloader
+</pre></div>
+
+
+<p>After you are done with writing your posts (place them in pages directory),
+and you customized the templates to your liking, just build everything 
+and upload the content of the build directory to your hosting provider.</p>
+<div class="codehilite"><pre><span class="o">(</span>furozun<span class="o">)[</span>amar@galaxy blog<span class="o">]</span><span class="nv">$ </span>furozun build
+<span class="o">(</span>furozun<span class="o">)[</span>amar@galaxy blog<span class="o">]</span><span class="nv">$ </span>ls build/
+contact/  hello-blog/  static/  index.html
+</pre></div>
+
+
+<p>That's all folks!</p>
+</article>
+
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17884344-2', 'sahinovic.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
